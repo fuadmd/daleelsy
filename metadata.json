@@ -1,0 +1,8 @@
+{
+  "name": "DaleelSy - Jobs Portal",
+  "description": "A comprehensive job recruitment platform for Syria, featuring advanced filtering, multilingual support (Arabic/English), and specialized dashboards for admins, employers, and candidates.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
