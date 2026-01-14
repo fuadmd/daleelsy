@@ -10,6 +10,7 @@ import EmployerDashboard from './pages/EmployerDashboard';
 import UserDashboard from './pages/UserDashboard';
 import Login from './pages/Login';
 import JobDetailModal from './components/JobDetailModal';
+import './index.css';
 
 const App: React.FC = () => {
   const [lang, setLang] = useState<Language>('ar');
@@ -50,7 +51,6 @@ const App: React.FC = () => {
     };
   });
 
-  // مراقبة جلسة المستخدم
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) fetchProfile(session.user.id);
@@ -65,7 +65,6 @@ const App: React.FC = () => {
     return () => subscription.unsubscribe();
   }, []);
 
-  // جلب الوظائف عند التحميل
   useEffect(() => {
     fetchJobs();
   }, []);

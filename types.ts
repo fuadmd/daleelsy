@@ -21,7 +21,7 @@ export interface Job {
   id: string;
   title: string;
   company: string;
-  companyLogo?: string; // New field
+  companyLogo?: string;
   region: string;
   subRegion?: string;
   specialty: string;
@@ -32,6 +32,8 @@ export interface Job {
   status: 'active' | 'expired' | 'pending';
   externalApplyUrl?: string;
   attachments?: string[];
+  salaryRange?: string;
+  type?: 'full-time' | 'part-time' | 'remote' | 'contract';
 }
 
 export interface CVExperience {
@@ -63,7 +65,7 @@ export interface CVData {
   educations: CVEducation[];
   courses: CVCourse[];
   skills: string[];
-  languages: { name: string; level: number }[]; // Level changed to number (1-5)
+  languages: { name: string; level: number }[];
   design: {
     accentColor: string;
     textColor: string;
